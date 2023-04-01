@@ -42,19 +42,19 @@ m=6; %samples number
 CR=zeros(length(cW),m+1);
 k=0;
 
-Sisxethsh_Deiktwn_meFFMC={'FFMC-DMC';'FFMC-DC';'FFMC-ISI';'FFMC-T';'FFMC-RH';'FFMC-WIND'}; 
+Index_Correlation_withFFMC={'FFMC-DMC';'FFMC-DC';'FFMC-ISI';'FFMC-T';'FFMC-RH';'FFMC-WIND'}; 
 
-Sisxethsh_Deiktwn_meDMC={'DMC-FFMC';'DMC-DC';'DMC-ISI';'DMC-T';'DMC-RH';'DMC-WIND'};
+Index_Correlation_withDMC={'DMC-FFMC';'DMC-DC';'DMC-ISI';'DMC-T';'DMC-RH';'DMC-WIND'};
 
-Sisxethsh_Deiktwn_meDC={'DC-FFMC';'DC-DMC';'DC-ISI';'DC-T';'DC-RH';'DC-WIND'};
+Index_Correlation_withDC={'DC-FFMC';'DC-DMC';'DC-ISI';'DC-T';'DC-RH';'DC-WIND'};
 
-Sisxethsh_Deiktwn_meISI={'ISI-FFMC';'ISI-DMC';'ISI-DC';'ISI-T';'ISI-RH';'ISI-WIND'};
+Index_Correlation_withISI={'ISI-FFMC';'ISI-DMC';'ISI-DC';'ISI-T';'ISI-RH';'ISI-WIND'};
 
-Sisxethsh_Deiktwn_meT={'T-FFMC';'T-DMC';'T-DC';'T-ISI';'T-RH';'T-WIND'};
+Index_Correlation_withT={'T-FFMC';'T-DMC';'T-DC';'T-ISI';'T-RH';'T-WIND'};
 
-Sisxethsh_Deiktwn_meRH={'RH-FFMC';'RH-DMC';'RH-DC';'RH-ISI';'RH-T';'RH-WIND'};
+Index_Correlation_withRH={'RH-FFMC';'RH-DMC';'RH-DC';'RH-ISI';'RH-T';'RH-WIND'};
 
-Sisxethsh_Deiktwn_meWIND={'WIND-FFMC';'WIND-DMC';'WIND-DC';'WIND-ISI';'WIND-T';'WIND-RH'};
+Index_Correlation_withWIND={'WIND-FFMC';'WIND-DMC';'WIND-DC';'WIND-ISI';'WIND-T';'WIND-RH'};
 
 
 
@@ -71,38 +71,38 @@ for i=1:m+1
 end
 
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(RP,n,m);
-P1=table(Sisxethsh_Deiktwn_meFFMC,t,p,r,ra,rb);
+P1=table(Index_Correlation_withFFMC,t,p,r,ra,rb);
 disp(P1);
 
 R1=dragatsikawExe4Fun5(RP);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R1,n,m);
-P2=table(Sisxethsh_Deiktwn_meDMC,t,p,r,ra,rb);
+P2=table(Index_Correlation_withDMC,t,p,r,ra,rb);
 disp(P2);
 
 R2=dragatsikawExe4Fun5(R1);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R2,n,m);
-P3=table(Sisxethsh_Deiktwn_meDC,t,p,r,ra,rb);
+P3=table(Index_Correlation_withDC,t,p,r,ra,rb);
 disp(P3);
 
 R3=dragatsikawExe4Fun5(R2);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R3,n,m);
-P4=table(Sisxethsh_Deiktwn_meISI,t,p,r,ra,rb);
+P4=table(Index_Correlation_withISI,t,p,r,ra,rb);
 disp(P4);
 
 R4=dragatsikawExe4Fun5(R3);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R4,n,m);
-P5=table(Sisxethsh_Deiktwn_meT,t,p,r,ra,rb);
+P5=table(Index_Correlation_withT,t,p,r,ra,rb);
 disp(P5);
 
 R5=dragatsikawExe4Fun5(R4);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R5,n,m);
-P6=table(Sisxethsh_Deiktwn_meRH,t,p,r,ra,rb);
+P6=table(Index_Correlation_withRH,t,p,r,ra,rb);
 disp(P6);
 
 
 R6=dragatsikawExe4Fun5(R5);
 [t,p,r,ra,rb]=dragatsikawExe4Fun2(R6,n,m);
-P7=table(Sisxethsh_Deiktwn_meWIND,t,p,r,ra,rb);
+P7=table(Index_Correlation_withWIND,t,p,r,ra,rb);
 disp(P7);
 
 % sampling test 
@@ -126,7 +126,7 @@ tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
 end   
  
-T1=table(Sisxethsh_Deiktwn_meFFMC,tlower,tupper);
+T1=table(Index_Correlation_withFFMC,tlower,tupper);
 disp(T1);
 
 Q1=dragatsikawExe4Fun5(CR);
@@ -140,7 +140,7 @@ for i=2:m+1
 tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
-T2=table(Sisxethsh_Deiktwn_meDMC,tlower,tupper);
+T2=table(Index_Correlation_withDMC,tlower,tupper);
 disp(T2);
 
 Q2=dragatsikawExe4Fun5(Q1);
@@ -154,7 +154,7 @@ for i=2:m+1
 tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
-T3=table(Sisxethsh_Deiktwn_meDC,tlower,tupper);
+T3=table(Index_Correlation_withDC,tlower,tupper);
 disp(T3);
 
 Q3=dragatsikawExe4Fun5(Q2);
@@ -168,7 +168,7 @@ for i=2:m+1
 tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
-T4=table(Sisxethsh_Deiktwn_meISI,tlower,tupper);
+T4=table(Index_Correlation_withISI,tlower,tupper);
 disp(T4);
 
 
@@ -183,7 +183,7 @@ for i=2:m+1
 tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
-T5=table(Sisxethsh_Deiktwn_meT,tlower,tupper);
+T5=table(Index_Correlation_withT,tlower,tupper);
 disp(T5);
 
 
@@ -198,7 +198,7 @@ for i=2:m+1
 tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
-T6=table(Sisxethsh_Deiktwn_meRH,tlower,tupper);
+T6=table(Index_Correlation_withRH,tlower,tupper);
 disp(T6);
 
 
@@ -215,7 +215,7 @@ tlower(i-1)=Tlower;
 tupper(i-1)=Tupper;
  end   
  
-T7=table(Sisxethsh_Deiktwn_meWIND,tlower,tupper);
+T7=table(Index_Correlation_withWIND,tlower,tupper);
 disp(T7);
   
 
