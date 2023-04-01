@@ -107,7 +107,7 @@ disp(P7);
 
 % sampling test 
 
-fprintf("the result of the sampling of the t-student test \n\n");
+fprintf("the result of the sampling of the t-student test  \n\n");
 L=1000;
 alpha = 0.05;
 tcrit = tinv(1-alpha/2,n-2);
