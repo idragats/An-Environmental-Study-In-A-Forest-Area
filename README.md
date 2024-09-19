@@ -30,7 +30,7 @@ of each area by examining the statistical size of the median. The correlation of
 and humidity in an attempt to fit initially linear models and then perhaps extend to nth degree polynomial models. Finally, the accuracy of the linear regression coefficient is investigated in the case where the dependence of
 temperature dependence on humidity is linear by calculating and comparing the parametric and bootstrap confidence intervals. 
 
-# Distribution Checks: Normal, Poisson, and Chi-Square (X²)
+# Distribution Checks: Normal, Poisson, and Chi-Square(X²)
 In this table we can see the results of chi-square goodness-of-fit test for both distributions, 
 normal and Poisson. the values of variable h show us if it approaches (h=0) or it doesn' t approach (h=1), each of distributions 
 
